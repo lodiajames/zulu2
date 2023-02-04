@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-color: black;
+
+
+html,
+body {
+  color: white;
+  background: #005f73;
+  user-select: none;
+ 
+}
+[data-theme='dark'],
+[data-theme='dark'] body {
+  color: white;
+  background: #000;
 }
