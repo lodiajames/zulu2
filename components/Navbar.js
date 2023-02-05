@@ -6,6 +6,7 @@ export default function Navbar() {
       <div className=''>
          <Header/>
          <Banner/>
+         
          </div>
     
   )
