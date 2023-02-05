@@ -11,7 +11,6 @@ import Results from "components/Results";
 
 export default function Home({results}) {
 
-  console.log(results)
 
 
 
