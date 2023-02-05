@@ -1,17 +1,11 @@
 
 const API_KEY = process.env.API_KEY;
 
-import { useRouter } from 'next/router'
 
 import Results from "components/Results";
 
 
-
-
-
 export default function Home({results}) {
-
-
 
 
   return <div>
