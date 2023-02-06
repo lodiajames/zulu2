@@ -10,11 +10,11 @@ export default function Card({result}) {
        <Link href={`/movie/${result.id}`}>
        {/* <Link href="https://www.imdb.com/"> */}
 
-        <Image src={`https://image.tmdb.org/t/p/original/${result.backdrop_path || result.poster_path} `} width={500} height={300}
+        <Image src={`https://image.tmdb.org/t/p/original/${result.backdrop_path || result.poster_path} `} width={500} height={300} 
         
         className="transition-opacity duration-200 ease-in-out rounded-t-lg sm:rounded-t-lg group-hover:opacity-80"
         placeholder='blur' blurDataURL='/loading.svg' alt='loading' style={{
-            maxWidth:"100%", height:"auto"
+            maxWidth:"100%", height:"auto" 
         }}>
 
         </Image>
