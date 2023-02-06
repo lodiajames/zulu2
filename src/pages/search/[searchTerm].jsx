@@ -3,21 +3,24 @@ import React from 'react'
 
 
 
-
 export async function getServerSideProps(context){
-    const movieId = context.query.search
+ 
+    const keyword =  context.query.searchTerm 
+   
+   
+    console.log("keyword " + keyword)
 
     
- const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&query=${movieId}&language=en-US&include_adult=false`)
+ const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&query=${keyword}&language=en-US&include_adult=false`)
    const data= await res.json();
-   const results = data.results
+   const results =  data.results
    
-     if(!res.ok){
-        throw new Error("oops movie not found")
-     }
+   
    return{
     props: {results}
+ 
    }
+
 
 }
 
@@ -28,10 +31,10 @@ export default function searchTerm ({results}) {
  
     return (<div>
         {results && results.length === 0 && (
-             <h1 className=''>No movie found</h1>
+             <h1 className='text-red-700 text-center'>No movie found</h1>
         )}
     {
-      results &&   <Results results= {results}/>
+     results && <Results  results={results}/>
     }
   
 
